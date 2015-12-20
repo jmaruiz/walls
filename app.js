@@ -60,6 +60,12 @@ var findWall = function(json, index) {
 			console.log('Wallpaper found at: ' + image);
 			downloadWall(image, i);
 			break;
+		} else if (json.data.children[i].data.url.indexOf('.png') > -1) {
+			var image = json.data.children[i].data.url;
+
+			console.log('Wallpaper found at: ' + image);
+			downloadWall(image, i);
+			break;
 		}
 	}
 }
@@ -67,6 +73,8 @@ var findWall = function(json, index) {
 var getWall = function(options) {
 
 	var url = 'http://reddit.com/r/' + subreddits + '/.json';
+
+	console.log("Contacting reddit servers...");
 
 	request(url, function (error, response, body) {
 	    if (!error && response.statusCode == 200) {
