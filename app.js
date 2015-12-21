@@ -97,18 +97,9 @@ var getWall = function(options) {
 }
 
 /*
-download('http://i.imgur.com/cEMxpSr.jpg', 'wall.jpg', function(){
-  console.log('done');
-});
-
-/*
-wallpaper.set('wall2.jpg').then(() => {
-    console.log('done');
-});
 
 wallpaper.get().then(imagePath => {
-    console.log(imagePath);
-    //=> '/Users/sindresorhus/unicorn.jpg'
+    console.log(imagePath); //prints wallpaper path
 });
 
 */
